@@ -1,0 +1,63 @@
+ssh-keygen
+cat .ssh/id_rsa.pub 
+pwd
+mkdir repogit
+cd repogit
+ls
+sudo apt install git
+git clone git@github.com:sofiasartori/reponuevo.git
+ls
+cat /etc/os-release 
+man grep
+grep home_url /etc/os-release 
+grep -i  home_url /etc/os-release 
+whoami
+cd reponuevo/
+whoami > datos_usuario
+echo “Usuario=$(whoami)” > datos_usuario.txt
+ls
+rm datos_usuario
+ls
+git add .
+git config --global user.email "sofiainessartori@hotmail.com"
+git config --global user.name "sofiasartori"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git status
+grep -i "model name" /proc/cpuinfo 
+grep -i "model name" /proc/cpuinfo | tail -n1
+grep -i "model name" /proc/cpuinfo | tail -n1 >> datos_usuario.txt 
+git add .
+git commit -m "feat:Anadiendo informacion de CPU"
+man grep
+grep -v nologin
+grep -v nologin /etc/passwd
+man sort
+grep -v nologin /etc/passwd | head | sort -n 7
+grep -v nologin /etc/passwd | head | sort -h 7
+grep -v nologin /etc/passwd | head
+man sort
+grep -v nologin /etc/passwd | head | sort -k 7
+grep -v nologin /etc/passwd | head | sort -k 7 >> lista_ordenada
+git add lista_ordenada 
+git commit -m "ADD: Listado de usuarios ordenada"
+tcpdump
+tcpdump -h
+tcpdump -h >> comando_dump_net
+cat comando_dump_net 
+echo "tcpdump -h" > comando_dump_net 
+man -k 'dump traffic'
+git add comando_dump_net 
+git commit -m "ADD: Comando para capturar y analizar el trafico de red"
+cat << FIN >> README.md 
+Alumno: Sofia
+Division: 114
+Turno: Manana
+FIN
+
+git status
+git add .
+git commit -m "commit"
+history -a >> $HOME/.bash_history
+ls
+ls -la
+history -a >> $HOME/.bash_history
